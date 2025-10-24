@@ -1,6 +1,6 @@
 # latex-live-previewer
 
-# 📐 LaTeX Previewer Pro
+# 📐 LaTeX Live Previewer 
 
 Un previsualizador de LaTeX moderno y elegante construido con **Vanilla JavaScript** y **MathJax 3**. Escribe fórmulas matemáticas y visualízalas en tiempo real sin necesidad de compilar.
 
