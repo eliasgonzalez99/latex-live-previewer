@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaTeX Previewer Pro</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📐 LaTeX Previewer Pro</h1>
+      <div class="toolbar">
+        <button class="btn" id="clear-btn">Limpiar</button>
+        <button class="btn btn-secondary" id="example-btn">Ejemplo</button>
+        <button class="btn btn-secondary" id="copy-btn">Copiar LaTeX</button>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="editor-panel">
+        <div class="panel-header">
+          <span>Editor</span>
+          <span class="char-count" id="char-count">0 caracteres</span>
+        </div>
+        <textarea 
+          id="latex-input" 
+          placeholder="Escribe tu código LaTeX aquí...&#10;&#10;Ejemplos:&#10;$$\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$&#10;&#10;$$\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$$"
+          spellcheck="false"
+        ></textarea>
+      </div>
+
+      <div class="preview-panel">
+        <div class="panel-header">
+          <span>Vista Previa</span>
+          <span class="status-indicator">
+            <span class="status-dot"></span>
+            <span id="render-status">Listo</span>
+          </span>
+        </div>
+        <div class="preview" id="preview">
+          <div class="empty-state">
+            <div class="empty-state-icon">🧠</div>
+            <div>
+              <h3>Vista previa de LaTeX</h3>
+              <p>Escribe código LaTeX en el editor para ver el resultado aquí</p>
+              <div class="examples">
+                Prueba con: <code>$$E = mc^2$$</code> o <code>$$\frac{a}{b}$$</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <span>MathJax v3 • Soporte completo de LaTeX</span>
+      <span id="last-update">Última actualización: Nunca</span>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

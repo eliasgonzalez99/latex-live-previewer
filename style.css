@@ -1,0 +1,214 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+      color: #f4f4f4;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      padding: 20px;
+      gap: 15px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(0, 195, 255, 0.1);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 195, 255, 0.2);
+    }
+
+    .header h1 {
+      color: #00c3ff;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      background: #00c3ff;
+      color: #1e1e1e;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: #00a8d9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 195, 255, 0.3);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: #444;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #555;
+    }
+
+    .main-content {
+      display: flex;
+      gap: 20px;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .editor-panel, .preview-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #2c2c2c;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #3a3a3a;
+    }
+
+    .panel-header {
+      padding: 12px 20px;
+      background: #333;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #3a3a3a;
+    }
+
+    .char-count {
+      font-size: 12px;
+      color: #888;
+    }
+
+    textarea {
+      flex: 1;
+      background: #2c2c2c;
+      color: #fff;
+      border: none;
+      padding: 20px;
+      font-size: 16px;
+      font-family: "Consolas", "Monaco", monospace;
+      resize: none;
+      outline: none;
+      line-height: 1.6;
+    }
+
+    textarea::placeholder {
+      color: #666;
+    }
+
+    .preview {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      line-height: 1.8;
+    }
+
+    .preview::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .preview::-webkit-scrollbar-track {
+      background: #1e1e1e;
+    }
+
+    .preview::-webkit-scrollbar-thumb {
+      background: #00c3ff;
+      border-radius: 4px;
+    }
+
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #666;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .empty-state-icon {
+      font-size: 48px;
+    }
+
+    .examples {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .examples code {
+      background: #1e1e1e;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #00c3ff;
+    }
+
+    .status-bar {
+      padding: 8px 20px;
+      background: #222;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00c3ff;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+      
+      .header h1 {
+        font-size: 18px;
+      }
+      
+      .toolbar {
+        flex-wrap: wrap;
+      }
+    }
